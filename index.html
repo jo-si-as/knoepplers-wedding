@@ -425,56 +425,6 @@
     margin-top: 1.4rem;
   }
 
-  /* ---------- Übernachtung ---------- */
-  .camp-card{
-    max-width: 640px;
-    margin: 0 auto 3rem;
-    text-align: center;
-    padding: 2.2rem 2.5rem;
-    background: var(--color-bg);
-    border: 1.5px solid var(--color-teal-dark);
-    border-radius: 4px;
-  }
-  .section-alt .camp-card{ background: var(--color-bg); }
-  .camp-card h3{ font-size: 1.4rem; margin-bottom: 0.5rem; }
-
-  .stay-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.4rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .stay-card{
-    padding: 1.6rem 1.7rem;
-    background: var(--color-bg);
-    border: 1px solid var(--color-line);
-    border-radius: 4px;
-    text-align: left;
-  }
-  .stay-card h4{
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin: 0 0 0.3rem;
-  }
-  .stay-card .addr{
-    color: var(--color-text-soft);
-    font-size: 0.88rem;
-    margin-bottom: 0.6rem;
-  }
-  .stay-card p{ font-size: 0.92rem; margin-bottom: 1rem; }
-  .stay-card .btn{
-    padding: 0.5em 1.1em;
-    font-size: 0.85rem;
-  }
-  .stay-note{
-    max-width: var(--max-text);
-    margin: 0 auto 2.4rem;
-    text-align: center;
-    color: var(--color-text-soft);
-  }
-
   /* ---------- Photo grid (Impressionen) ---------- */
   .photo-grid{
     display: grid;
@@ -511,7 +461,6 @@
   .sticker-hero-2{ top: 9%; right: 4%; transform: rotate(11deg); }
   .sticker-hero-3{ top: 9%; left: 4%; transform: rotate(-13deg); }
   .sticker-ort{ top: 14px; right: 4%; transform: rotate(7deg); }
-  .sticker-stay{ top: -22px; left: 4%; transform: rotate(-11deg); }
   .sticker-impressionen{ bottom: -18px; right: 5%; transform: rotate(-6deg); }
   .sticker-rsvp{ top: 8px; left: 3%; transform: rotate(9deg); }
   .sticker-rsvp-2{ bottom: 6px; right: 4%; transform: rotate(13deg); }
@@ -612,6 +561,26 @@
     color: var(--color-text-soft);
     max-width: 58ch;
   }
+  .faq-item ul{
+    margin: 0.9rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--color-text-soft);
+    max-width: 58ch;
+  }
+  .faq-item li{ margin-bottom: 0.7rem; }
+  .faq-item li:last-child{ margin-bottom: 0; }
+  .faq-item li strong{ color: var(--color-text); }
+  .faq-item li a{
+    display: inline-block;
+    margin-top: 0.15rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-mustard-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-mustard);
+  }
+  .faq-item li a:hover{ border-color: var(--color-mustard-dark); }
 
   /* ---------- Footer ---------- */
   footer{
@@ -695,9 +664,8 @@
     <nav class="primary-nav" id="primary-nav">
       <a href="#video">Video</a>
       <a href="#ort">Ort</a>
-      <a href="#uebernachtung">Übernachten</a>
-      <a href="#faq">FAQ</a>
       <a href="#rsvp">Anmelden</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </div>
 </header>
@@ -793,114 +761,6 @@
     </div>
   </section>
 
-  <!-- ================= ÜBERNACHTUNG ================= -->
-  <section class="section" id="uebernachtung">
-    <img class="sticker sticker-stay" src="images/sticker-dog-grass.jpg" alt="" loading="lazy">
-    <div class="container">
-      <div class="section-head centered">
-        <p class="eyebrow">Für alle, die bleiben</p>
-        <h2>Wo ihr schlafen könnt</h2>
-      </div>
-
-      <div class="camp-card">
-        <h3>Zelten bei uns auf der Ranch</h3>
-        <p>
-          Wer Lust auf Camping-Feeling hat, ist herzlich eingeladen,
-          direkt bei uns auf der Ranch zu zelten oder mit dem Camper
-          zu kommen. Gebt uns einfach über das Anmeldeformular Bescheid,
-          dann richten wir alles Nötige für euch her.
-        </p>
-      </div>
-
-      <p class="stay-note">
-        Wer es lieber etwas komfortabler mag, findet in der Umgebung
-        ein paar schöne Hotels:
-      </p>
-
-      <div class="stay-grid">
-        <div class="stay-card">
-          <h4>Landgasthof Hotel Bechtel</h4>
-          <p class="addr">Vor der Brücke 4 · 34628 Willingshausen (Zella)</p>
-          <p>Familiengeführtes Landhotel mit eigenem Restaurant.</p>
-          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Landgasthof%20Hotel%20Bechtel%2C%20Vor%20der%20Br%C3%BCcke%204%2C%2034628%20Willingshausen" target="_blank" rel="noopener">Route planen</a>
-        </div>
-        <div class="stay-card">
-          <h4>Hotel Rosengarten</h4>
-          <p class="addr">Muhlystr. 3 · 34613 Schwalmstadt (Ziegenhain)</p>
-          <p>Historisches Fachwerkhaus in der Altstadt von Ziegenhain.</p>
-          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Rosengarten%2C%20Muhlystr.%203%2C%2034613%20Schwalmstadt" target="_blank" rel="noopener">Route planen</a>
-        </div>
-        <div class="stay-card">
-          <h4>Hotel Die Landgräfinnen</h4>
-          <p class="addr">Landgraf-Philipp-Str. 3 · 34613 Schwalmstadt (Ziegenhain)</p>
-          <p>Gemütliches Hotel mit Restaurant, ebenfalls in Ziegenhain.</p>
-          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Die%20Landgr%C3%A4finnen%2C%20Landgraf-Philipp-Stra%C3%9Fe%203%2C%2034613%20Schwalmstadt" target="_blank" rel="noopener">Route planen</a>
-        </div>
-        <div class="stay-card">
-          <h4>Landhotel Combecher</h4>
-          <p class="addr">Kurhessenstraße 32 · 34626 Neukirchen (Knüll)</p>
-          <p>Traditionshotel am Südhang des Knüllgebirges.</p>
-          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Landhotel%20Combecher%2C%20Kurhessenstra%C3%9Fe%2032%2C%2034626%20Neukirchen" target="_blank" rel="noopener">Route planen</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FAQ ================= -->
-  <section class="section section-alt" id="faq">
-    <img class="sticker sticker-faq" src="images/sticker-rad.jpg" alt="" loading="lazy">
-    <div class="container">
-      <div class="section-head centered">
-        <p class="eyebrow">Noch Fragen?</p>
-        <h2>Häufig gefragt</h2>
-      </div>
-
-      <div style="max-width: 640px; margin: 0 auto;">
-        <details class="faq-item">
-          <summary>Gibt es Parkplätze?</summary>
-          <p>
-            Bitte fahrt nicht direkt auf die Ranch – parkt stattdessen
-            auf den Feldwegen bzw. am Wegesrand im Dorf.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Sind Kinder willkommen?</summary>
-          <p>
-            Ja, total! Bei hoffentlich gutem Wetter können sie sich auf
-            der Ranch reichlich austoben. Da es bei uns Gewässer, alte
-            Gebäude und Scheunen gibt, bitten wir Eltern, ihre Kinder im
-            Blick zu behalten – Eltern haften für ihre Kinder. Gebt uns
-            über das Anmeldeformular einfach Bescheid, wie viele Kinder
-            und Babys mitkommen, damit wir bei Essen und Programm alles
-            passend einplanen können.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Was ist, wenn es regnet?</summary>
-          <p>
-            Kein Problem – bei Regen haben wir mit einem kleinen Zelt
-            und dem Saloon ausreichend Platz zum Feiern.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Dürfen wir Fotos machen?</summary>
-          <p>
-            Sehr gerne! Im Anschluss teilen wir einen Link mit den
-            schönsten Bildern des Tages. Mit der Teilnahme an unserer
-            privaten Feier stimmt ihr zu, dass dabei fotografiert wird.
-          </p>
-        </details>
-      </div>
-
-      <p style="text-align:center; color:var(--color-text-soft); margin-top:2.4rem;">
-        Weitere Fragen? Meldet euch einfach bei Ira oder Josias.
-      </p>
-    </div>
-  </section>
-
   <!-- ================= RSVP ================= -->
   <section class="section" id="rsvp">
     <img class="sticker sticker-rsvp" src="images/sticker-poodle-stretch.jpg" alt="" loading="lazy">
@@ -991,8 +851,8 @@
       </form>
 
       <div class="rsvp-success" id="rsvp-success">
-        <h3>Danke euch!</h3>
-        <p style="max-width:46ch;margin:0 auto;">
+        <h3 id="rsvp-success-title">Danke euch!</h3>
+        <p id="rsvp-success-text" style="max-width:46ch;margin:0 auto;">
           Eure Anmeldung ist bei uns eingegangen. Ihr bekommt in Kürze eine
           Bestätigung per E-Mail – darüber könnt ihr eure Angaben auch
           jederzeit wieder ändern.
@@ -1000,6 +860,97 @@
       </div>
 
       <p class="deadline-note">Rückmeldung erbeten bis Ende März 2027.</p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section section-alt" id="faq">
+    <img class="sticker sticker-faq" src="images/sticker-rad.jpg" alt="" loading="lazy">
+    <div class="container">
+      <div class="section-head centered">
+        <p class="eyebrow">Noch Fragen?</p>
+        <h2>Häufig gefragt</h2>
+      </div>
+
+      <div style="max-width: 640px; margin: 0 auto;">
+        <details class="faq-item">
+          <summary>Gibt es Parkplätze?</summary>
+          <p>
+            Bitte fahrt nicht direkt auf die Ranch – parkt stattdessen
+            auf den Feldwegen bzw. am Wegesrand im Dorf.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Sind Kinder willkommen?</summary>
+          <p>
+            Ja, total! Bei hoffentlich gutem Wetter können sie sich auf
+            der Ranch reichlich austoben. Da es bei uns Gewässer, alte
+            Gebäude und Scheunen gibt, bitten wir Eltern, ihre Kinder im
+            Blick zu behalten – Eltern haften für ihre Kinder. Gebt uns
+            über das Anmeldeformular einfach Bescheid, wie viele Kinder
+            und Babys mitkommen, damit wir bei Essen und Programm alles
+            passend einplanen können.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Was ist, wenn es regnet?</summary>
+          <p>
+            Kein Problem – bei Regen haben wir mit einem kleinen Zelt
+            und dem Saloon ausreichend Platz zum Feiern.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Dürfen wir Fotos machen?</summary>
+          <p>
+            Sehr gerne! Im Anschluss teilen wir einen Link mit den
+            schönsten Bildern des Tages. Mit der Teilnahme an unserer
+            privaten Feier stimmt ihr zu, dass dabei fotografiert wird.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Können wir campen oder zelten?</summary>
+          <p>
+            Ja, sehr gerne! Wer Lust auf Camping-Feeling hat, ist herzlich
+            eingeladen, direkt bei uns auf der Ranch zu zelten oder mit
+            dem Camper zu kommen. Gebt uns dafür einfach über das
+            Anmeldeformular Bescheid, dann richten wir alles Nötige für
+            euch her. Strom können wir vor Ort eventuell nicht überall
+            anbieten, Duschen gibt es nur im Haus – Außentoiletten stehen
+            aber zur Verfügung.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Habt ihr Hotelempfehlungen in der Nähe?</summary>
+          <p>Wer es lieber etwas komfortabler mag als Zelten, findet in der Umgebung ein paar schöne Hotels:</p>
+          <ul>
+            <li>
+              <strong>Landgasthof Hotel Bechtel</strong> – Vor der Brücke 4, 34628 Willingshausen (Zella). Familiengeführtes Landhotel mit eigenem Restaurant.<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=Landgasthof%20Hotel%20Bechtel%2C%20Vor%20der%20Br%C3%BCcke%204%2C%2034628%20Willingshausen" target="_blank" rel="noopener">Route planen</a>
+            </li>
+            <li>
+              <strong>Hotel Rosengarten</strong> – Muhlystr. 3, 34613 Schwalmstadt (Ziegenhain). Historisches Fachwerkhaus in der Altstadt von Ziegenhain.<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=Hotel%20Rosengarten%2C%20Muhlystr.%203%2C%2034613%20Schwalmstadt" target="_blank" rel="noopener">Route planen</a>
+            </li>
+            <li>
+              <strong>Hotel Die Landgräfinnen</strong> – Landgraf-Philipp-Str. 3, 34613 Schwalmstadt (Ziegenhain). Gemütliches Hotel mit Restaurant, ebenfalls in Ziegenhain.<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=Hotel%20Die%20Landgr%C3%A4finnen%2C%20Landgraf-Philipp-Stra%C3%9Fe%203%2C%2034613%20Schwalmstadt" target="_blank" rel="noopener">Route planen</a>
+            </li>
+            <li>
+              <strong>Landhotel Combecher</strong> – Kurhessenstraße 32, 34626 Neukirchen (Knüll). Traditionshotel am Südhang des Knüllgebirges.<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=Landhotel%20Combecher%2C%20Kurhessenstra%C3%9Fe%2032%2C%2034626%20Neukirchen" target="_blank" rel="noopener">Route planen</a>
+            </li>
+          </ul>
+        </details>
+      </div>
+
+      <p style="text-align:center; color:var(--color-text-soft); margin-top:2.4rem;">
+        Weitere Fragen? Meldet euch einfach bei Ira oder Josias.
+      </p>
     </div>
   </section>
 
@@ -1215,6 +1166,12 @@
       });
       if (!res.ok) throw new Error('request failed');
       form.style.display = 'none';
+      document.getElementById('rsvp-success-title').textContent = attending
+        ? 'Danke euch!'
+        : 'Schade, dass ihr nicht dabei sein könnt!';
+      document.getElementById('rsvp-success-text').textContent = attending
+        ? 'Eure Anmeldung ist bei uns eingegangen. Ihr bekommt in Kürze eine Bestätigung per E-Mail – darüber könnt ihr eure Angaben auch jederzeit wieder ändern.'
+        : 'Danke für eure Rückmeldung. Falls sich das noch ändert, könnt ihr eure Angaben über den Link in der Bestätigungsmail jederzeit anpassen.';
       document.getElementById('rsvp-success').classList.add('visible');
     } catch (err) {
       submitBtn.disabled = false;
