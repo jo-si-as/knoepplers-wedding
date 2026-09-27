@@ -49,10 +49,27 @@ module.exports = async (req, res) => {
     if (typeof body === 'string') {
       try { body = JSON.parse(body); } catch { body = {}; }
     }
-    const { token, name, email, attending, message, guests } = body || {};
+    const { token, name, email, attending, message, guests, note_ref } = body || {};
+
+    // Honeypot: this hidden field is invisible to real guests and named so it
+    // doesn't match any real autofill category. Any bot that fills it gets a
+    // fake "success" so it moves on without touching the DB.
+    if (note_ref) {
+      return res.status(200).json({ ok: true });
+    }
 
     if (!name || !isValidEmail(email) || typeof attending !== 'boolean') {
       return res.status(400).json({ error: 'missing or invalid fields' });
+    }
+
+    if (
+      name.length > 120 ||
+      email.length > 200 ||
+      (message && message.length > 2000) ||
+      (Array.isArray(guests) && guests.length > 30) ||
+      (Array.isArray(guests) && guests.some(g => g && ((g.name || '').length > 120 || (g.allergies || '').length > 500)))
+    ) {
+      return res.status(400).json({ error: 'input too long' });
     }
 
     let rsvpId, editToken;
